@@ -22,4 +22,10 @@ def fetchWord():
     word = response.json()[0]
     return word
 
-print(fetchWord()+fetchWord())
+def generateWeakerPassword():
+    word1 = fetchWord()
+    word2 = fetchWord()
+    password = word1 + word2
+    return password
+
+print(generateWeakerPassword())
